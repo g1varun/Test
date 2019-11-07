@@ -5,10 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                withMaven (maven : maven)
-            {
-            sh 'mvn clean compile'
-            }
+                sh 'cd /home/edureka'
+                sh 'ls'
+                sh 'pwd'
+                sh 'df'
+                sh 'echo $PATH'
+
             }
         }
         stage('Test') {
