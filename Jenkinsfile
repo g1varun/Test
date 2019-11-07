@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'cd /home/edureka'
+                sh 'cd /home/varun.gupta'
                 sh 'ls'
                 sh 'pwd'
                 sh 'df'
