@@ -5,13 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'cd /home/varun.gupta'
-                sh 'ls'
-                sh 'pwd'
-                sh 'df'
-                sh 'echo $PATH'
-
-            }
+             }
         }
         stage('Test') {
             steps {
