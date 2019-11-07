@@ -6,6 +6,10 @@ pipeline {
             steps {
                 echo 'Building..'
             }
+            withMaven (maven : maven)
+            {
+            sh 'mvn clean compile'
+            }
         }
         stage('Test') {
             steps {
