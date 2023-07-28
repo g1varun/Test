@@ -19,9 +19,9 @@ jobs:
     #run: |
     #echo foo=bar >> $GITHUB_OUTPUT
     
-    - name: Set enviornment variable
-    run: |
-    echo foo=bar >> $env:GITHUB_OUTPUT
+    #- name: Set enviornment variable
+    #run: |
+    #echo foo=bar >> $env:GITHUB_OUTPUT
 
     - name: Set values step one
     id: set_one
@@ -31,5 +31,5 @@ jobs:
     - name: Set values step two
     id: set_two
     run: |
-    echo "${{ env.acction_state }}"
+    echo "${{ env.action_state }}"
     
