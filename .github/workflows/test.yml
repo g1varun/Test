@@ -8,11 +8,15 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+    
+defaults:
+   run:
+     shell: bash
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    
     steps:
     
     #- name: Set output variable
@@ -23,13 +27,13 @@ jobs:
     #run: |
     #echo foo=bar >> $env:GITHUB_OUTPUT
 
-    - name: Set values step one
-    id: set_one
-    run: |
-    echo "action_state=yellow" >> "GITHUB_ENV"
-    
-    - name: Set values step two
-    id: set_two
-    run: |
-    echo "${{ env.action_state }}"
-    
+        - name: Set values step one
+        id: set_one
+        run: |
+        echo "action_state=yellow" >> "GITHUB_ENV"
+        
+        - name: Set values step two
+        id: set_two
+        run: |
+        echo "${{ env.action_state }}"
+        
