@@ -2,7 +2,7 @@ name: Hellos
 on: push
 defaults:
   run:
-    shell: bash
+    shell: pwsh
 jobs:
   my-job:
     runs-on: ubuntu-latest
