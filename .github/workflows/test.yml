@@ -11,7 +11,7 @@ jobs:
         name: Generate, mask, and output a secret
         run: |
           the_secret=$((cat abc.txt))
-          echo "::add-mask::$the_secret"
+          echo "$the_secret"
           echo "$GITHUB_OUTPUT"
           echo "secret-number=$the_secret" >> "$GITHUB_OUTPUT"
       - name: Use that secret output (protected by a mask)
