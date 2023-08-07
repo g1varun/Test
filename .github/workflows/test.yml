@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set output variable
-        shell: bash
+        #shell: bash
         run: |
           value= cat abc.txt
           echo $value
