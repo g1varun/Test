@@ -10,7 +10,7 @@ jobs:
       - id: sets-a-secret
         name: Generate, mask, and output a secret
         run: |
-          the_secret=$((RANDOM))
+          the_secret=$((cat abc.txt))
           echo "::add-mask::$the_secret"
           echo "$GITHUB_OUTPUT"
           echo "secret-number=$the_secret" >> "$GITHUB_OUTPUT"
