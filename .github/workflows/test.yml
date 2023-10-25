@@ -10,7 +10,7 @@ jobs:
       - name: Set output variable
         #shell: bash
         run: |
-          echo cat ${{ github.workspace }}/abc.txt
+          echo $(cat ${{ github.workspace }}/abc.txt)
           
           echo foo=bar >> $GITHUB_OUTPUT
       - name: Set enviornment variable
