@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set output variable
-        #shell: bash
+        shell: bash
         run: |
-          echo $(cat ${{ github.workspace }}/abc.txt)
-          
+          $val = $(cat ${{ github.workspace }}/abc.txt)
+          echo $val
           echo foo=bar >> $GITHUB_OUTPUT
       - name: Set enviornment variable
         run: |
